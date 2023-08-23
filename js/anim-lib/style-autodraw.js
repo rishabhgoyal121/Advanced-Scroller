@@ -52,55 +52,53 @@ function draw_new_blouse(
   svg.html("");
 
   svg
-    .append("path")
+    .append("image")
     .attr("class", "blouse-underlay")
-    .attr("fill", nsd_color_options[color_choice])
     .attr(
-      "d",
-      nsd_sleeve_paths[sleeve_choice].d + nsd_neckline_paths[neckline_choice].d
-    )
-    .attr("transform", "translate(" + x + "," + y + ") scale(" + scale + ")")
+      "xlink:href",
+      "Trampoline-svg-crop/furniture-color/bedsidetable-2.svg"
+    ).attr("transform", "translate(294,248) scale(0.45)")
     .style("opacity", 1e-6)
     .transition()
     .delay(1000)
     .duration(400)
     .style("opacity", 1);
 
-  if (pattern_choice == 3) {
-    svg
-      .append("path")
-      .attr("class", "blouse-overlay")
-      .attr("fill", "none")
-      .attr("stroke", "#000")
-      .attr("stroke-width", 0.25)
-      .attr(
-        "d",
-        nsd_sleeve_paths[sleeve_choice].d +
-          nsd_neckline_paths[neckline_choice].d
-      )
-      .attr("transform", "translate(" + x + "," + y + ") scale(" + scale + ")")
-      .style("opacity", 1e-6)
-      .transition()
-      .delay(1000)
-      .duration(400)
-      .style("opacity", 1);
-  } else {
-    svg
-      .append("path")
-      .attr("class", "blouse-overlay")
-      .attr("fill", "url(#pattern-" + nsd_pattern_options[pattern_choice] + ")")
-      .attr("stroke", "#000")
-      .attr("stroke-width", 0.25)
-      .attr(
-        "d",
-        nsd_sleeve_paths[sleeve_choice].d +
-          nsd_neckline_paths[neckline_choice].d
-      )
-      .attr("transform", "translate(" + x + "," + y + ") scale(" + scale + ")")
-      .style("opacity", 1e-6)
-      .transition()
-      .delay(1000)
-      .duration(400)
-      .style("opacity", 1);
-  }
+  // if (pattern_choice == 3) {
+  //   svg
+  //     .append("path")
+  //     .attr("class", "blouse-overlay")
+  //     .attr("fill", "none")
+  //     .attr("stroke", "#000")
+  //     .attr("stroke-width", 0.25)
+  //     .attr(
+  //       "d",
+  //       nsd_sleeve_paths[sleeve_choice].d +
+  //         nsd_neckline_paths[neckline_choice].d
+  //     )
+  //     .attr("transform", "translate(" + x + "," + y + ") scale(" + scale + ")")
+  //     .style("opacity", 1e-6)
+  //     .transition()
+  //     .delay(1000)
+  //     .duration(400)
+  //     .style("opacity", 1);
+  // } else {
+  //   svg
+  //     .append("path")
+  //     .attr("class", "blouse-overlay")
+  //     .attr("fill", "url(#pattern-" + nsd_pattern_options[pattern_choice] + ")")
+  //     .attr("stroke", "#000")
+  //     .attr("stroke-width", 0.25)
+  //     .attr(
+  //       "d",
+  //       nsd_sleeve_paths[sleeve_choice].d +
+  //         nsd_neckline_paths[neckline_choice].d
+  //     )
+  //     .attr("transform", "translate(" + x + "," + y + ") scale(" + scale + ")")
+  //     .style("opacity", 1e-6)
+  //     .transition()
+  //     .delay(1000)
+  //     .duration(400)
+  //     .style("opacity", 1);
+  // }
 }
