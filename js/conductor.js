@@ -118,7 +118,7 @@ activateFunctions.push(function () {
   show_topics();
   highlight_topics([]);
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2015/07/07/personalizing-beyond-the-point-of-no-return/" target="_">Personalizing Beyond the Point of No Return</a>'
+    ''
   );
   highlight_svg_groups([
     "sketch-styling-circle",
@@ -166,7 +166,7 @@ activateFunctions.push(function () {
   overview_reset();
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Let's first walk through the filling of a shipment request... */
 
@@ -191,10 +191,10 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        (-r + r * Math.cos((progress2 * Math.PI) / 2)) +
-        "," +
-        -r * Math.sin((progress2 * Math.PI) / 2) +
-        ")"
+      (-r + r * Math.cos((progress2 * Math.PI) / 2)) +
+      "," +
+      -r * Math.sin((progress2 * Math.PI) / 2) +
+      ")"
     );
 
   d3.selectAll("#sketch-client-selected")
@@ -215,10 +215,10 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        (r - r * Math.cos((progress2 * Math.PI) / 2)) +
-        "," +
-        r * Math.sin((progress2 * Math.PI) / 2) +
-        ")"
+      (r - r * Math.cos((progress2 * Math.PI) / 2)) +
+      "," +
+      r * Math.sin((progress2 * Math.PI) / 2) +
+      ")"
     );
 
   d3.select("#client1")
@@ -229,12 +229,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        (125 - 100 + 100 * progress2) +
-        "," +
-        (300 - 150 + 150 * progress2) +
-        ") scale(" +
-        0.5 +
-        ")"
+      (125 - 100 + 100 * progress2) +
+      "," +
+      (300 - 150 + 150 * progress2) +
+      ") scale(" +
+      0.5 +
+      ")"
     );
 });
 
@@ -261,12 +261,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        125 * (1 - progress2) +
-        "," +
-        300 * (1 - progress2) +
-        ") scale(" +
-        (0.5 + 0.5 * progress2) +
-        ")"
+      125 * (1 - progress2) +
+      "," +
+      300 * (1 - progress2) +
+      ") scale(" +
+      (0.5 + 0.5 * progress2) +
+      ")"
     );
 
   // and show me the forms
@@ -413,7 +413,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2014/07/21/machine-and-expert-human-resources/" target="_">Machine and Expert-Human Resources: A Synthesis of Art and Science for Recommendations</a>'
+    ''
   );
   highlight_topics(["warehouse-assignment"]);
   highlight_svg_groups(["calendar", "profile", "wh2"]);
@@ -485,12 +485,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        -435 * progress +
-        "," +
-        -252 * progress +
-        ") scale(" +
-        (1 + 0.5 * progress) +
-        ")"
+      -435 * progress +
+      "," +
+      -252 * progress +
+      ") scale(" +
+      (1 + 0.5 * progress) +
+      ")"
     );
 
   // and the human stylists smaller
@@ -543,7 +543,7 @@ activateFunctions.push(function () {
   d3.select("#machines").attr("transform", "translate(-435,-252) scale(1.5)");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* For each of the remaining styles, the machines then try to evaluate the relative likelihood... */
 
@@ -570,7 +570,7 @@ activateFunctions.push(function () {
   fix_progression("to_machines", 1);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* In some ways, the problem is a classic collaborative filtering problem... */
 
@@ -604,7 +604,7 @@ activateFunctions.push(function () {
   fix_progression("to_machines", 1);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* However, unlike most collaborative filtering problems, we have a lot of explicit data... */
 
@@ -638,14 +638,14 @@ activateFunctions.push(function () {
   fix_progression("to_machines", 1);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* One such approach is mixed-effects modeling... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2015/07/14/glmms/" target="_">Learning from the experience of others with mixed effects models</a>'
+    ''
   );
   highlight_topics(["recommendation-systems"]);
   highlight_svg_groups([
@@ -676,7 +676,7 @@ activateFunctions.push(function () {
   fix_progression("to_machines", 1);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* And in addition to the many explicit features available, there are some particularly pertinent latent (unstated) features... */
 
@@ -718,7 +718,7 @@ activateFunctions.push(function () {
   stop_animation_interval("latent_size_meta2_interval");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* For example, a new client may tell us that she wears medium-sized blouses, but where exactly... */
 
@@ -776,7 +776,7 @@ activateFunctions.push(function () {
   run_movie_stopwatch(3000, 2);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* With clients' fit feedback and purchase histories, we can learn where particular clients and styles fall along this spectrum... */
 
@@ -834,7 +834,7 @@ activateFunctions.push(function () {
   run_movie_stopwatch(5000, 2);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Moving our problem even further beyond classical collaborative filtering, we also have a lot of photographic and textual data... */
 
@@ -885,7 +885,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog posts: <a href="http://multithreaded.stitchfix.com/blog/2015/09/17/deep-style/" target="_">Deep Style</a>, <a href="http://multithreaded.stitchfix.com/blog/2016/02/04/computer-vision-state-of-the-art/" target="_">Unsupervised Computer Vision</a>'
+    ''
   );
   highlight_topics(["recommendation-systems"]);
   highlight_svg_groups([
@@ -935,14 +935,14 @@ activateFunctions.push(function () {
   run_movie_stopwatch(5000, 3);
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Natural language processing is used to score items based on the client's request note and textual feedback from other clients... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog posts: <a href="http://multithreaded.stitchfix.com/blog/2015/03/11/word-is-worth-a-thousand-vectors/" target="_">A Word is Worth a Thousand Vectors</a>, <a href="http://multithreaded.stitchfix.com/blog/2016/05/27/lda2vec/" target="_">Hybrid lda2vec Algorithm</a>'
+    ''
   );
   highlight_topics(["recommendation-systems"]);
   highlight_svg_groups([
@@ -987,7 +987,7 @@ activateFunctions.push(function () {
   start_lda2vec_animation();
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* All of these algorithm scores—and many others like them—are taken into account when ordering and presenting options for the human... */
 
@@ -1107,12 +1107,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        -435 * (1 - progress) +
-        "," +
-        -252 * (1 - progress) +
-        ") scale(" +
-        (1 + 0.5 * (1 - progress)) +
-        ")"
+      -435 * (1 - progress) +
+      "," +
+      -252 * (1 - progress) +
+      ") scale(" +
+      (1 + 0.5 * (1 - progress)) +
+      ")"
     );
 });
 
@@ -1295,12 +1295,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        -400 * progress +
-        "," +
-        -200 * progress +
-        ") scale(" +
-        (1 + 0.5 * progress) +
-        ")"
+      -400 * progress +
+      "," +
+      -200 * progress +
+      ") scale(" +
+      (1 + 0.5 * progress) +
+      ")"
     );
 });
 
@@ -1309,7 +1309,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/04/14/hcomp2/" target="_">Machine Learning To Kickstart Human Training</a>'
+    ''
   );
   highlight_topics(["human-computation"]);
   highlight_svg_groups([
@@ -1348,14 +1348,14 @@ activateFunctions.push(function () {
     .attr("transform", "translate(-400,-200) scale(1.5)");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Our human computation team does a lot of testing with variations on this interface... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/04/14/hcomp2/" target="_">Machine Learning To Kickstart Human Training</a>'
+    ''
   );
   highlight_topics(["human-computation"]);
   highlight_svg_groups([
@@ -1390,14 +1390,14 @@ activateFunctions.push(function () {
     .attr("transform", "translate(-400,-200) scale(1.5)");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* This knowledge helps us in many ways: to improve our algorithmic styling, to improve our stylist training... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/04/14/hcomp2/" target="_">Machine Learning To Kickstart Human Training</a>'
+    ''
   );
   highlight_topics(["human-computation"]);
   highlight_svg_groups([
@@ -1445,7 +1445,7 @@ activateFunctions.push(function () {
     .attr("d", stylist_note_tween(0));
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Ultimately, the stylist finalizes the selections from the inventory list and writes a personal note... */
 
@@ -1541,12 +1541,12 @@ updateFunctions.push(function (progress) {
     .attr(
       "transform",
       "translate(" +
-        -400 * (1 - progress2) +
-        "," +
-        -200 * (1 - progress2) +
-        ") scale(" +
-        (1 + 0.5 * (1 - progress2)) +
-        ")"
+      -400 * (1 - progress2) +
+      "," +
+      -200 * (1 - progress2) +
+      ") scale(" +
+      (1 + 0.5 * (1 - progress2)) +
+      ")"
     );
 });
 
@@ -1631,7 +1631,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/21/skynet-salesman/" target="_">The Skynet Salesman</a>'
+    ''
   );
   highlight_topics(["logistics-optimization"]);
   highlight_svg_groups([
@@ -1754,7 +1754,7 @@ activateFunctions.push(function () {
   stop_animation_timer("inventory_animation_timer");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /*  But this is just one shipment. Zooming out, we can consider the system as a whole... */
 
@@ -1883,7 +1883,7 @@ activateFunctions.push(function () {
   animate_full_height_client();
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* We keep track of every touch point we have with each client... */
 
@@ -1952,7 +1952,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog posts: <a href="http://multithreaded.stitchfix.com/blog/2015/07/30/gam/" target="_">GAM</a>, <a href="http://multithreaded.stitchfix.com/blog/2016/04/21/forget-arima/" target="_">Sorry ARIMA</a>, <a href="http://multithreaded.stitchfix.com/blog/2017/02/28/whats-wrong-with-my-time-series/" target="_">What\'s Wrong With My Time Series</a>'
+    ''
   );
   highlight_topics(["demand-modeling"]);
   highlight_svg_groups([
@@ -1975,7 +1975,7 @@ activateFunctions.push(function () {
   stop_animation_timer("inventory_management_sim_model_timer");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 // Inventory Management
 /* Inventory depletion through customer demand must ultimately be offset by purchases of new inventory... */
@@ -2053,7 +2053,7 @@ activateFunctions.push(function () {
   state_transitions_clear();
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* (Note that the situation is more complex than this simple illustration... */
 
@@ -2087,7 +2087,7 @@ activateFunctions.push(function () {
   );
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* How much of what styles to purchase? Which items should go to which warehouse? What inventory should be donated when? */
 
@@ -2121,7 +2121,7 @@ activateFunctions.push(function () {
   );
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* We answer these questions by using a model of the system dynamics... */
 
@@ -2171,7 +2171,7 @@ activateFunctions.push(function () {
   );
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 // New Style Development
 /* Volumetric challenges are not the only considerations at play with inventory replacement... */
@@ -2219,7 +2219,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([]);
@@ -2259,7 +2259,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups(["nsd-ea-diagram", "nsd-attrs-blouse"]);
@@ -2292,7 +2292,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2350,14 +2350,14 @@ activateFunctions.push(function () {
   ).attr("fill", "#847c77");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* Now consider creating new styles by recombining attributes from existing styles... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2440,14 +2440,14 @@ activateFunctions.push(function () {
   ).attr("fill", "#847c77");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* In the next step, we deviate somewhat from a canonical genetic algorithm... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2497,14 +2497,14 @@ activateFunctions.push(function () {
   ).attr("fill", "#847c77");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* We first develop a model of how well a given set of attributes is likely to suit the target clients... */
 
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2577,7 +2577,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2649,7 +2649,7 @@ updateFunctions.push(function (progress) {
 activateFunctions.push(function () {
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/07/14/data-driven-fashion-design/" target="_">Data-Driven Fashion Design</a>'
+    ''
   );
   highlight_topics(["new-style-development"]);
   highlight_svg_groups([
@@ -2708,7 +2708,7 @@ activateFunctions.push(function () {
   ).attr("fill", "#847c77");
 });
 
-updateFunctions.push(function (progress) {});
+updateFunctions.push(function (progress) { });
 
 /* There is indeed a lot going on in our Algorithms team... */
 
@@ -2758,7 +2758,7 @@ activateFunctions.push(function () {
 
   // view management
   update_footer(
-    'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/" target="_">Engineers Shouldn’t Write ETL</a>, <a href="http://multithreaded.stitchfix.com/blog/2017/01/23/scaling-ds-at-sf-slides-from-ddtexas/" target="_">Scaling Data Science</a>'
+    ''
   );
   highlight_topics(["data-platform"]);
   highlight_svg_groups([
@@ -2830,7 +2830,7 @@ updateFunctions.push(function (progress) {
     });
 
     update_footer(
-      'blog post: <a href="http://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/" target="_">Engineers Shouldn’t Write ETL</a>, <a href="http://multithreaded.stitchfix.com/blog/2017/01/23/scaling-ds-at-sf-slides-from-ddtexas/" target="_">Scaling Data Science</a>'
+      ''
     );
 
     d3.selectAll(
