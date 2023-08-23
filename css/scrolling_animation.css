@@ -14,7 +14,7 @@
   top: 0px;
   z-index: 0;
   height: calc(100vh);
-  background: #f7f5f2;
+  background: #ffffff;
 }
 
 #intro-credits {
@@ -108,7 +108,7 @@ p {
   max-width: calc((100vh - 45px) * 926 / 665);
 }
 
-#vis > svg {
+#vis>svg {
   height: calc(100vh - 45px);
 }
 
@@ -253,6 +253,7 @@ h3 {
   p {
     font-size: 12px;
   }
+
   #footer {
     font-size: 12px;
   }
@@ -262,6 +263,7 @@ h3 {
   p {
     font-size: 1rem;
   }
+
   #footer {
     font-size: 14px;
   }
@@ -271,6 +273,7 @@ h3 {
   p {
     font-size: 1.1rem;
   }
+
   #footer {
     font-size: 14px;
   }
@@ -282,28 +285,35 @@ h3 {
   #topics {
     display: none;
   }
+
   #sections {
     margin-left: 0px;
     width: 25%;
   }
+
   #vis {
     width: 75%;
   }
+
   #footer {
     margin-left: 5px;
   }
+
   #intro-title {
     bottom: 30px;
     margin-left: 35px;
   }
+
   #intro-credits {
     top: 230px;
     left: 35px;
   }
+
   #intro-paragraph {
     padding-left: 22px;
     padding-right: 22px;
   }
+
   #closing-paragraph {
     padding-left: 22px;
     padding-right: 22px;
@@ -315,20 +325,25 @@ h3 {
   #topics {
     display: none;
   }
+
   #sections {
     margin-left: 0px;
     width: 35%;
   }
+
   #vis {
     width: 65%;
   }
+
   #footer {
     margin-left: 5px;
   }
+
   #intro-title {
     bottom: 30px;
     margin-left: 35px;
   }
+
   #intro-credits {
     top: 60px;
     left: 35px;
@@ -340,22 +355,27 @@ h3 {
   #topics {
     display: none;
   }
+
   #sections {
     margin-left: 0px;
     width: 25%;
   }
+
   #vis {
     width: 75%;
   }
+
   #footer {
     margin-left: 5px;
   }
+
   #intro-title {
     bottom: 240px;
     margin-left: 35px;
     background-color: rgba(247, 245, 242, 0);
     box-shadow: 0 0 10px 15px rgba(247, 245, 242, 0);
   }
+
   #intro-credits {
     top: calc(100vh - 200px);
     left: 35px;
@@ -379,20 +399,25 @@ h3 {
   #topics {
     display: none;
   }
+
   #sections {
     margin-left: 0px;
     width: 25%;
   }
+
   #vis {
     width: 75%;
   }
+
   #footer {
     margin-left: 5px;
   }
+
   #intro-credits {
     top: calc(100vh - 360px);
     right: 20px;
   }
+
   .intro-credits {
     font-size: 12px;
     margin-bottom: 12px;
@@ -429,7 +454,7 @@ h3 {
   cursor: pointer;
 }
 
-#small-screen-note-turn-sideways > p {
+#small-screen-note-turn-sideways>p {
   text-align: center;
   font-size: 12px;
   line-height: 1.5;
@@ -448,6 +473,7 @@ a.nav-tweet-the-tour-sm {
 }
 
 @media only screen and (max-width: 737px) {
+
   li.nav-tweet-the-tour-sm,
   a.nav-tweet-the-tour-sm {
     display: none;
@@ -460,6 +486,7 @@ a.nav-tweet-the-tour-sm {
 }
 
 @media only screen and (min-width: 738px) and (max-width: 850px) {
+
   li.nav-tweet-the-tour-sm,
   a.nav-tweet-the-tour-sm {
     display: block;
@@ -480,6 +507,7 @@ a.nav-tweet-the-tour-sm {
     url("fonts/cmu/cmunti.svg#cmunti") format("svg");
   font-weight: normal;
 }
+
 @font-face {
   font-family: "CMUSerif-Roman";
   src: url("fonts/cmu/cmunrm.eot");
@@ -489,6 +517,7 @@ a.nav-tweet-the-tour-sm {
     url("fonts/cmu/cmunrm.svg#cmunrm") format("svg");
   font-weight: normal;
 }
+
 @font-face {
   font-family: "CMUClassicalSerif-Italic";
   src: url("fonts/cmu/cmunci.eot");
@@ -498,6 +527,7 @@ a.nav-tweet-the-tour-sm {
     url("fonts/cmu/cmunci.svg#cmunci") format("svg");
   font-weight: normal;
 }
+
 @font-face {
   font-family: "CMUSansSerif";
   src: url("fonts/cmu/cmunss.eot");
@@ -511,8 +541,7 @@ a.nav-tweet-the-tour-sm {
 @font-face {
   font-family: "brandontext-svg-bold";
   src: url("fonts/brandontext-svg/31E0E1_0_0.eot");
-  src: url("fonts/brandontext-svg/31E0E1_0_0.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("fonts/brandontext-svg/31E0E1_0_0.eot?#iefix") format("embedded-opentype"),
     url("fonts/brandontext-svg/31E0E1_0_0.woff") format("woff"),
     url("brandontext-svg/31E0E1_0_0.ttf") format("truetype"),
     url("brandontext-svg/31E0E1_0_0.svg") format("svg");
@@ -522,8 +551,7 @@ a.nav-tweet-the-tour-sm {
 @font-face {
   font-family: "brandontext-svg-regular";
   src: url("fonts/brandontext-svg/31E0E1_2_0.eot");
-  src: url("fonts/brandontext-svg/31E0E1_2_0.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("fonts/brandontext-svg/31E0E1_2_0.eot?#iefix") format("embedded-opentype"),
     url("fonts/brandontext-svg/31E0E1_2_0.woff") format("woff"),
     url("brandontext-svg/31E0E1_2_0.ttf") format("truetype"),
     url("brandontext-svg/31E0E1_2_0.svg") format("svg");
