@@ -27,7 +27,7 @@ function highlight_svg_groups(group_names) {
 function update_footer(html_text) {
   if (html_text != page_state.current_footer) {
     d3.select("#footer")
-      .style("opacity", 1)
+      .style("opacity", 1e-6)
       .transition()
       .duration(500)
       .style("opacity", 1e-6);
@@ -36,7 +36,7 @@ function update_footer(html_text) {
         .html(html_text)
         .transition()
         .duration(500)
-        .style("opacity", 1);
+        .style("opacity", 1e-6);
     }, 500);
     page_state.current_footer = html_text;
   }
