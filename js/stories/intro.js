@@ -37,10 +37,10 @@ function intro_slide() {
 
   // mapping functions
   var coord_x_client = function (r, a) {
-    return -150 - 60 + 500 * r;
+    return -150 - 60 + 520 * r;
   };
-  var coord_x_style = function (r, a) {
-    return -75 + 385 + 250 * r;
+  var coord_x_style = function (r, a) { // for inventory img
+    return -75 + 385 + 450 * r;
   };
 
   // adding data-linked dom elements for bar graph and stylists
@@ -116,10 +116,10 @@ function intro_slide() {
       .attr(
         "transform",
         "translate(" +
-          coord_x_client(rad) +
-          "," +
-          (-50 + (svg_px_height + 50) * initial_position_ratio) +
-          ")"
+        coord_x_client(rad) +
+        "," +
+        (-50 + (svg_px_height + 50) * initial_position_ratio) +
+        ")"
       )
       .transition()
       .duration((1 - initial_position_ratio) * total_trans_duration)
@@ -131,35 +131,31 @@ function intro_slide() {
       .remove();
   }
   for (var i = 0; i < 150; i++) {
-    var rad = Math.random();
-    var total_trans_duration = (5 * (0.3 + Math.random() * 0.4)) / speed;
-    var initial_position_ratio = Math.random();
+    var rad2 = Math.random();
+    var total_trans_duration2 = (5 * (0.3 + Math.random() * 0.4)) / speed;
+    var initial_position_ratio2 = Math.random();
+    var client_outline_n2 = -1;
+    if (Math.random() < 0.25) {
+      client_outline_n2 = Math.floor(Math.random() * 3) + 4;
+    } else {
+      client_outline_n2 = Math.floor(Math.random() * 3) + 1;
+    }
 
     d3.select("#intro-matching-background-animation")
-      .append("path")
+      .append("g")
+      .html(detailed_inventory_outline_g(client_outline_n2))
       .attr("class", "inventory-cycle-silhouette")
-      .attr("fill", "#fff")
-      .attr("stroke", "#000")
-      .attr("stroke-width", 0.25)
       .style("opacity", 1)
       .attr(
-        "d",
-        silhouette_outline_d(
-          Math.floor(Math.random() * 14),
-          coord_x_style(Math.random()),
-          -50
-        )
-      )
-      .attr(
         "transform",
-        "translate(0," +
-          (svg_px_height + 50) * initial_position_ratio +
-          ") scale(2)"
+        "translate(" + (coord_x_style(rad2) * 1.017 + 303) + "," + (-50 + (svg_px_height + 50) * initial_position_ratio2) + ")"
       )
       .transition()
-      .duration((1 - initial_position_ratio) * total_trans_duration)
+      .duration((1 - initial_position_ratio2) * total_trans_duration2)
       .ease("linear")
-      .attr("transform", "translate(0," + (svg_px_height + 50) + ") scale(2)")
+      .attr("transform", "translate(" +
+        (coord_x_style(rad2) + 303) +
+        "," + (svg_px_height + 50) + ")")
       .remove();
   }
 
@@ -193,10 +189,10 @@ function intro_slide() {
         .attr(
           "transform",
           "translate(" +
-            coord_x_client(client_rad) +
-            "," +
-            (-50 - 50 * Math.random()) +
-            ")"
+          coord_x_client(client_rad) +
+          "," +
+          (-50 - 50 * Math.random()) +
+          ")"
         )
         .transition()
         .duration((5 * (0.3 + Math.random() * 0.4)) / speed)
@@ -204,35 +200,38 @@ function intro_slide() {
         .attr(
           "transform",
           "translate(" +
-            coord_x_client(client_rad) +
-            "," +
-            (svg_px_height + 50) +
-            ")"
+          coord_x_client(client_rad) +
+          "," +
+          (svg_px_height + 50) +
+          ")"
         )
         .remove();
     }
 
     for (var i = 0; i < 3; i++) {
+      var inventory_rad = Math.random();
+
+      var inventory_outline_n = -1;
+      if (Math.random() < 0.25) {
+        inventory_outline_n = Math.floor(Math.random() * 3) + 4;
+      } else {
+        inventory_outline_n = Math.floor(Math.random() * 3) + 1;
+      }
       d3.select("#intro-matching-background-animation")
-        .append("path")
+        .append("g")
+        .html(detailed_inventory_outline_g(inventory_outline_n))
         .attr("class", "inventory-cycle-silhouette")
-        .attr("fill", "#fff")
-        .attr("stroke", "#000")
-        .attr("stroke-width", 0.25)
         .style("opacity", 1)
         .attr(
-          "d",
-          silhouette_outline_d(
-            Math.floor(Math.random() * 14),
-            coord_x_style(Math.random()),
-            -50 - 50 * Math.random()
-          )
+          "transform",
+          "translate(" + (coord_x_style(inventory_rad) * 1.017 + 303) + "," + (-50 - 50 * Math.random()) + ")"
         )
-        .attr("transform", "translate(0,0) scale(2)")
         .transition()
         .duration((5 * (0.3 + Math.random() * 0.4)) / speed)
         .ease("linear")
-        .attr("transform", "translate(0," + (svg_px_height + 50) + ") scale(2)")
+        .attr("transform", "translate(" +
+          (coord_x_style(inventory_rad) * 1.017 + 303) +
+          "," + (svg_px_height + 50) + ")")
         .remove();
     }
   }
@@ -298,8 +297,8 @@ function intro_slide() {
       .attr(
         "transform",
         "translate(150," +
-          (-200 - 1 * intro_foreground_top_padding) +
-          ") scale(4)"
+        (-200 - 1 * intro_foreground_top_padding) +
+        ") scale(4)"
       )
       .attr("d", silhouette_outline_d(style_outline_n, 160, 0))
       .transition()
@@ -400,7 +399,7 @@ function intro_slide() {
               0,
               Math.floor(
                 (client_data.length * (-t + (duration * 2) / 3)) /
-                  (duration / 6)
+                (duration / 6)
               )
             )
           );
