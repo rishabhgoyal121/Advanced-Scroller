@@ -6167,7 +6167,7 @@
             id="state-machines-topic"
             style="display: none; opacity: 1e-6"
           >
-            State Machines
+            Response Modelling
           </a>
           <a
             href="#demand-modeling"
@@ -6255,9 +6255,7 @@
           <h3>Manufacturer Allocation</h3>
           <section class="step" style="margin-bottom: 100px">
             <p>
-              At Trampoline, our mission is to revolutionize how Brands discover home decor items that resonate with their
-              preferences. Our customers aspire to discover impeccable home decor pieces tailored to their unique clientele, all while
-              avoiding the complexities of searching and staying up-to-date with the latest trends. 
+              At Trampoline, we're revolutionizing the way independent retailers worldwide discover and acquire Home Decor. Our mission is to provide customers with the ideal home decor that resonates with their unique preferences, all while alleviating the challenges of searching and staying up-to-date with the latest trends. Our merchandise is thoughtfully curated consuming the latest market trends and accentuated with our distinctive designs to provide a highly topical and relevant selection to our customers.  
 
             </p>
           </section>
@@ -6353,13 +6351,13 @@
 
           <section class="step">
             <p>
-              For example, a new client may tell us that they want medium-sized
-              chairs, but where exactly would their preference fall along the
-              spectrum of smallish mediums to largish mediums? The same question
-              also applies to particular styles of home decor furniture in our inventory.
-              (Note that in this illustration we’re treating fit as
-              unidimensional for simplicity, but in fact at Trampoline we treat
-              it as multidimensional.)
+              For example, a new client may tell us that they want medium-sized chairs, but where exactly would their preference fall
+              along the spectrum of smallish mediums to largish mediums? The same question also applies to particular styles of home
+              decor furniture in our inventory. </p><p>Note that in this illustration we’re treating fit as unidimensional for simplicity,
+              but in fact at Trampoline we treat it as multidimensional.With clients' fit feedback and purchase histories, we can
+              learn where particular clients and styles fall along this spectrum. These latent features can then be used in our
+              mixed-effects models and elsewhere.
+
             </p>
           </section>
 
@@ -6424,10 +6422,14 @@
 
           <section class="step">
             <p>
-              This match score is a sophisticated function influenced
-              by the historical interactions between the client and the manufacturer (if applicable), as well as the affinities shared
-              between the client's stated and underlying preferences and those of the designs. Subsequently, the assignment
-              optimization problem resembles the manufacturing assignment challenge discussed earlier.
+              Following the completion of machine-generated rankings, the shipment request is directed to a human analyst. Unlike
+              machines, humans exhibit significant heterogeneity. Machines are uniform—pick any one. However, human analysts and their
+              decisions are better suited for certain clients than others. Hence, we employ algorithms to optimize this pairing. To
+              achieve this, we initiate the calculation of a match score between each available manufacturer and every client who has
+              requested a shipment within the current period. This match score is a sophisticated function influenced by the historical
+              interactions between the client and the manufacturer (if applicable), as well as the affinities shared between the
+              client's stated and underlying preferences and those of the designs. Subsequently, the assignment optimization problem
+              resembles the manufacturing assignment challenge discussed earlier.
             </p>
           </section>
 
@@ -6493,7 +6495,7 @@
 
           <section class="step">
             <p>
-              For example, given the items selected for a shipment, what is the best route for pickers to take through the warehouse to
+              For example, given the items selected for a shipment, what is the best route for pickers to take through the manufacturer to
               fill the box?
               This problem of pick-path routing is an instance of the NP-hard Traveling Salesman Problem.
             </p>
@@ -6520,8 +6522,7 @@
           >
             <p>But this is just the beginning.</p>
             <p>
-              Client gets the shipment, is hopefully delighted, keeps what they want
-              and sends back then rest, and then
+              Client gets the shipment, is hopefully delighted,
               <i>tells us what they think about each article of home decor furniture</i>.
               There is a symbiotic relationship between them and Trampoline, and
               they give us very insightful feedback that we use not only to
@@ -6535,10 +6536,7 @@
             <p>
               To recap the process of filling a single shipment request: a
               client creates a Requirement Profile and requests a shipment, we match
-              them to a warehouse, our design algorithms and human designers
-              work together to select styles, the designer writes a note, we
-              deliver the shipment, and the client keep what they like, return
-              the rest, and provide us with feedback.
+              them to a manufacturer, and provide us with feedback.
             </p>
           </section>
 
@@ -6613,7 +6611,7 @@
             <p>
               One of the many uses of these chain models is to anticipate
               future demand, which is important because we often need to buy
-              inventory months before it arrives at the warehouses. We must also
+              inventory months before it arrives at the manufacturers. We must also
               ensure that we have the right number of resources and human
               designers available at the right times.
             </p>
@@ -6626,7 +6624,7 @@
               Inventory depletion through customer demand must ultimately be
               offset by purchases of new inventory. One of the challenges is in
               getting the timing of purchases right, so that we maintain
-              adequate inventory availability for designers while minimizing the
+              adequate inventory availability while minimizing the
               sum of ordering costs and carrying costs (the operation costs and
               opportunity costs of capital associated with the area under the
               inventory curve).
@@ -6637,8 +6635,7 @@
             <p>
               Meeting future demand is just one of our inventory management
               challenges: we must also allocate inventory appropriately to
-              different warehouses, and occasionally donate old inventory to
-              make room for new designs. We can use algorithms to help us with
+              different manufacturers. We can use algorithms to help us with
               these processes.
             </p>
           </section>
@@ -6647,8 +6644,7 @@
             <p>
               (Note that the situation is more complex than this simple
               illustration, since we must drill down to look at the availability
-              of different types and styles of home decor furniture in each of the
-              warehouses. But we'll stick to the simple illustrations here for
+              of different types and styles of home decor furniture. But we'll stick to the simple illustrations here for
               cleanliness.)
             </p>
           </section>
@@ -6656,7 +6652,7 @@
           <section class="step">
             <p>
               How much of what styles to purchase? Which items should go to
-              which warehouse? What inventory should be donated when?
+              which manufacturer? What inventory should be donated when?
             </p>
           </section>
 
@@ -9860,7 +9856,7 @@
                 text-anchor="start"
                 transform="rotate(33,550,225)"
               >
-                warehouse assignments
+                manufacturer assignments
               </text>
               <text
                 class="inventory-cycle-sim-persistent-text"
@@ -9978,7 +9974,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="14px"
               >
-                warehouse assignment
+                manufacturer assignment
               </text>
             </g>
             <g display="none" style="opacity: 1e-6" id="legend-client-profiles">
@@ -11259,7 +11255,7 @@
                   font-family="'brandontext-svg-regular'"
                   font-size="14"
                 >
-                  Warehouse Assign.
+                  Manufacturer Assign.
                 </text>
               </g>
             </g>
@@ -15925,7 +15921,7 @@
                   font-family="'CMUSerif-Roman'"
                   font-size="12px"
                 >
-                  warehouses
+                  manufacturers
                 </tspan>
                 <tspan
                   x="62.8"
@@ -31637,7 +31633,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="14px"
               >
-                warehouses
+                manufacturers
               </text>
             </g>
             <g display="none" style="opacity: 1e-6" id="im-warehouse-labels">
@@ -31647,7 +31643,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="13.5px"
               >
-                CA warehouse
+                CA manufacturer
               </text>
               <text
                 transform="matrix(6.123234e-17 -1 1 6.123234e-17 118.7123 362.5)"
@@ -31655,7 +31651,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="13.5px"
               >
-                TX warehouse
+                TX manufacturer
               </text>
               <text
                 transform="matrix(6.123234e-17 -1 1 6.123234e-17 191.0372 362.5)"
@@ -31663,7 +31659,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="13.5px"
               >
-                WI warehouse
+                WI manufacturer
               </text>
               <text
                 transform="matrix(6.123234e-17 -1 1 6.123234e-17 263.362 362.5)"
@@ -31671,7 +31667,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="13.5px"
               >
-                PA warehouse
+                PA manufacturer
               </text>
               <text
                 transform="matrix(6.123234e-17 -1 1 6.123234e-17 335.6869 362.5)"
@@ -31679,7 +31675,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="13.5px"
               >
-                GA warehouse
+                GA manufacturer
               </text>
             </g>
             <g display="none" style="opacity: 1e-6" id="im-labels-purchase">
@@ -39012,7 +39008,7 @@
                 font-family="'brandontext-svg-regular'"
                 font-size="14"
               >
-                warehouses
+                manufacturers
               </text>
             </g>
 
