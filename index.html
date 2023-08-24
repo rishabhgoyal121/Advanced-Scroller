@@ -6516,34 +6516,33 @@
           <h3>Response Modelling</h3>
           <section class="step">
             <p>
-              One of the ways we view this needs-anticipation problem (and related problems) is to consider the "state" of each client
-              at each point in time. Are they a new client? Did they arrive via referral or on their own? Is their store nearly full?
-              Are they in a phase of building up their catalogue in other categories? Or simply wanting to try something new?
-              Depending on their state, they will likely have difference shipment cadences, different desires for email contact, etc.
+              When addressing the challenge of anticipating client needs and related issues, we adopt a perspective that involves
+              examining the distinct "state" of each client at different moments in time. This entails considering various factors,
+              such as whether they are new clients, if they were referred or joined independently, whether their inventory is nearly
+              complete, whether they are in a phase of expanding or seeking sales growth, or simply looking to explore new options.
+              These different states influence aspects like outreach frequency, email communication preferences, and more.
+</p>
+          </section>
+
+          <section class="step">
+            <p>
+              We meticulously document every interaction we have with each client—every product we send, all feedback received,
+              referrals made, emails exchanged, and more. Through the analysis of this comprehensive data, our goal is to comprehend
+              clients' states and the corresponding needs that arise within those states. By recognizing shifts in state and
+              identifying potential triggers, we can gain valuable insights that contribute to enhancing client satisfaction.
 
             </p>
           </section>
 
           <section class="step">
             <p>
-              We keep track of every touch point we have with each client—every item we send, every piece of feedback we get, every
-              referral, every email, etc.
-            </p>
-          </section>
-
-          <section class="step">
-            <p>
-              With this data, we try to understand clients' states and their needs when in those different states. We can then detect
-              changes in state and consider possible triggers. This process by itself can lead to insights that help us keep our
-              clients happier.
-
+              Once we've established a clear understanding of these states and their transitions, we move towards constructing state transition matrices and developing Markov chain models. These tools empower us to delve into the broader effects within our system. Through the examination of state transitions and probabilities, we can uncover system-level dynamics and trends that further inform our strategies.
             </p>
           </section>
 
           <section id="demand-modeling" class="step">
             <p>
-              And once we define and understand states, and detect and understand clients' transitions between them, we can develop
-              state transition matrices and chain models that allow us to study system-level effects.
+              Ultimately, our approach revolves around creating a comprehensive framework that allows us to monitor, analyze, and respond to clients' evolving needs by deciphering their changing states. By employing advanced analytical techniques, we aim to ensure that our clients receive a personalized and responsive experience that aligns with their specific clientele  and requirements.
             </p>
           </section>
 
@@ -6562,39 +6561,35 @@
 
           <section class="step">
             <p>
-              Inventory depletion through customer demand must ultimately be
-              offset by purchases of new inventory. One of the challenges is in
-              getting the timing of purchases right, so that we maintain
-              adequate inventory availability while minimizing the
-              sum of ordering costs and carrying costs (the operation costs and
-              opportunity costs of capital associated with the area under the
-              inventory curve).
+              Inventory depletion through customer demand must ultimately be offset by purchases of new inventory. One of the
+              challenges is in getting the timing of purchases right, so that we maintain adequate inventory availability for designs
+              while minimizing the sum of ordering costs and carrying costs (the operation costs and opportunity costs of capital
+              associated with the area under the inventory curve).
             </p>
           </section>
 
           <section class="step">
             <p>
-              Meeting future demand is just one of our inventory management
-              challenges: we must also allocate inventory appropriately to
-              different manufacturers. We can use algorithms to help us with
-              these processes.
+              Meeting future demand is just one of our inventory management challenges: we must also allocate inventory appropriately
+              to different warehouses, and occasionally donate old inventory to make room for new styles. We can use algorithms to
+              help us with these processes.
+
             </p>
           </section>
 
           <section class="step">
             <p>
-              (Note that the situation is more complex than this simple
-              illustration, since we must drill down to look at the availability
-              of different types and styles of home decor furniture. But we'll stick to the simple illustrations here for
-              cleanliness.)
+              (Note that the situation is more complex than this simple illustration, since we must drill down to look at the
+              availability of different types and styles of decor in each of the categories. But we'll stick to the simple
+              illustrations here for cleanliness.)
+
             </p>
           </section>
 
           <section class="step">
-            <!-- <p>
-              How much of what styles to purchase? Which items should go to
-              which manufacturer? What inventory should be donated when?
-            </p> -->
+            <p>
+              How much of what styles to forward position? Which items should go to manufacturers across tiered priorities? 
+            </p>
           </section>
 
           <section id="new-style-development" class="step">
@@ -6607,65 +6602,46 @@
           <h3>Design Studio</h3>
           <section class="step">
             <p>
-              Beyond addressing inventory challenges related to volume, our focus extends to continually enhancing our inventory
-              through the acquisition and development of new home decor furniture. This strategic approach aims to create a more
-              delightful experience for a diverse clientele and ensures that our designers can cater effectively to a broad range of
-              customers. Moreover, the design of new designs for our Trampoline exclusive brands presents an exceptional opportunity
-              to tailor our creations to specific client segments that may not be well-served by other brands. This focused approach
-              allows us to meet the unique needs and preferences of these underserved segments.
-              I
+              Beyond addressing inventory challenges related to fragmented volume, our focus extends to continually enhancing our
+              selection through the acquisition and development of new SKUs. This strategic approach aims to create a more delightful
+              experience for a diverse clientele and ensures that our styles can cater effectively to a broad range of customers.
 
             </p>
           </section>
 
           <section class="step">
             <p>
-              Inspired by genetic algorithms, we adopt a method that involves recombination, mutation, and a home decor design
-              measure—similar to the natural selection process. Each home decor furniture style is treated as a set of attributes or
-              "genes," and we take into account both our extensive style collection and the client feedback ("home decor design")
-              available for each style. Using this framework, we generate new designs by combining attributes from existing ones,
-              potentially introducing minor mutations.
+              Inspired by genetic algorithms, we adopt a method that involves recombination, mutation, and a Home decor And design
+              measure—similar to the natural selection process. Each decor style is treated as a set of attributes or "genes," and we
+              take into account both our extensive style collection and the client feedback ("preference") available for each style.
+</p>
+          </section>
 
+          <section class="step" style="margin: 180px 0">
+            <p>
+              Using this framework, we generate new styles by combining attributes from existing ones, potentially introducing minor
+              mutations. It's important to note that the number of possible combinations is exceptionally large.
+</p>
+          </section>
+
+          <section class="step" style="margin: 180px 0">
+            <p>
+              In our subsequent steps, we deviate slightly from the traditional genetic algorithm approach. Rather than solely relying
+              on fitness for selection, we develop a model that assesses how well a specific set of attributes is likely to suit our
+              target clients. This model guides us in highlighting attribute sets that are likely to be well-received.
+</p>
+          </section>
+
+          <section class="step" style="margin: 180px 0">
+            <p>
+              Working collaboratively with our human designers, we meticulously vet and refine the highlighted attribute sets. This process ensures that the designs align with our brand's vision and the preferences of our clients. The refined designs then evolve into the next generation of styles.
             </p>
           </section>
 
           <section class="step" style="margin: 180px 0">
             <p>
-              It's important to note that the number of possible combinations is exceptionally large. In our subsequent steps, we
-              deviate slightly from the traditional genetic algorithm approach. Rather than solely relying on home decor design for
-              selection, we develop a model that assesses how well a specific set of attributes is likely to suit our target clients.
+              In our Algorithms team, a multitude of intricacies are at play. We've introduced some of the ongoing projects within our three vertically-aligned teams: Styling Algorithms, Merch Algorithms, and Client Algorithms.
             </p>
-          </section>
-
-          <section class="step" style="margin: 180px 0">
-            <p>
-              This model guides us in highlighting attribute sets that are likely to be well-received. Working collaboratively with
-              our human designers, we meticulously vet and refine the highlighted attribute sets.This process ensures that the designs
-              align with our brand's vision and the preferences of our clients. The refined designs then evolve into the next
-              generation of styles.In the next step, we deviate somewhat from a canonical genetic algorithm: instead of simply
-              selecting based on home decor design and then unleashing random recombinations and mutations as the next generation of
-              styles, we’re somewhat more picky about what makes it into our inventory.These newly crafted styles are integrated into
-              our design algorithm, making this iterative cycle of design, production, and feedback perpetuates the evolution of our
-              offerings. In our Algorithms team, a multitude of intricacies are at play.We've introduced some of the ongoing projects
-              within our three vertically-aligned teams:</p>
-          </section>
-
-          <section class="step" style="margin: 180px 0">
-            <!-- <p>
-              This
-              process ensures that the designs align with our brand's vision and the preferences of our clients. The refined designs
-              then evolve into the next generation of styles.
-            </p> -->
-          </section>
-
-          <section class="step" style="margin: 180px 0">
-            <!-- <p>
-              In the next step, we deviate somewhat from a canonical genetic
-              algorithm: instead of simply selecting based on home decor design and then
-              unleashing random recombinations and mutations as the next
-              generation of styles, we’re somewhat more picky about what makes
-              it into our inventory.
-            </p> -->
           </section>
 
           <section class="step" style="margin: 180px 0">
@@ -6686,8 +6662,8 @@
             <!-- <p>
               We've introduced some of the ongoing projects within our
               three vertically-aligned teams: </p> -->
-              <p>Design Algorithms, Merch Algorithms, and Client Algorithms.
-            </p>
+              <!-- <p>Design Algorithms, Merch Algorithms, and Client Algorithms.
+            </p> -->
           </section>
 
           <section id="data-platform" class="step">
@@ -6709,6 +6685,32 @@
               abstracts away the complexities of the underlying technical aspects, allowing data scientists to primarily focus on the
               analytical and scientific aspects of their work.
             </p>
+            <p>Key aspects of the Data Platform team's role include:</p>
+            <p>Infrastructure and SaaS Products: The team provides a comprehensive ecosystem that includes both data and compute infrastructure. Additionally, they offer a suite of internal SaaS products designed to facilitate various stages of the data science workflow, from initial analysis to deployment.</p>
+            <p>Enabling Vertical Alignment: By catering to the needs of vertically-aligned data scientists, the Data Platform team
+            ensures that the tools and resources provided are tailored to specific industry domains or use cases, enhancing the
+            relevance and applicability of the platform.
+</p>
+            <p>Analysis and Algorithm Development: The platform offers capabilities that aid data scientists in conducting analysis and
+            developing algorithms. These might involve libraries, frameworks, and tools that streamline data exploration, modeling,
+            and experimentation processes.
+</p><p>Production Readiness: The Data Platform team supports the transition of data science work from development to
+production. This includes mechanisms for deploying algorithms as services, automating processes, and integrating with
+other systems in the business environment.
+</p><p>Technical Abstraction: The platform abstracts away technical complexities such as data distribution, parallelization,
+auto-scaling, and failover. This abstraction empowers data scientists to work at a higher level of abstraction,
+unburdened by infrastructure details.
+</p><p>Focus on Scalability: The platform's auto-scaling and failover capabilities ensure that data scientists can seamlessly
+handle varying workloads, making it possible to perform large-scale computations without manual intervention.
+</p><p>Collaboration and Knowledge Sharing: The Data Platform team likely fosters collaboration among data scientists, enabling
+them to share code, findings, and insights, which can lead to increased productivity and collective learning.
+</p><p>Engineers and Full-Stack Data Scientists: The Data Platform engineers are responsible for designing, developing, and
+maintaining the core infrastructure and tools. On the other hand, full-stack data scientists possess a blend of data
+science and application development skills, allowing them to bridge the gap between data-driven solutions and business
+requirements.</p><p>The overarching goal of the Data Platform team is to create an environment where data scientists can seamlessly progress
+from initial concept to full production deployment, with minimal friction caused by technical complexities. This allows
+them to leverage their expertise in data science while enjoying the benefits of a scalable and well-managed system
+provided by the Data Platform team.</p>
           </section>
         </div>
 
@@ -39326,15 +39328,17 @@
         Trampoline. While attempting to encapsulate our achievements within the ten stories presented above, we acknowledge the
         challenge in confining our scope. There is a multitude of ongoing projects, with even more concepts in the process of
         formulation. It's worth noting that what we recognize as applied data science is deeply rooted in a diverse realm of
-        elegant microeconomic theory. Historically, the practical application of these theoretical concepts has been hindered by
-        factors such as the scarcity of accessible data and computational resources. Moreover, the adoption of these ideas
-        beyond academia has often been constrained by entrenched organizational culture, making change a formidable endeavor.
-        However, at Trampoline, we find ourselves remarkably unencumbered by these barriers. Our unique business model has
-        enabled us to amass a wealth of valuable data, and our culture fosters an environment in which data scientists can
-        thrive. In this context, our distinguishing feature might simply be our adeptness at acquiring comprehensive data
-        through our distinctive business approach, followed by the cultivation of an environment conducive to the success of
-        data scientists. With these cornerstones in place, curiosity, innovation, and the desire to drive meaningful change
-        become the driving forces propelling our endeavors forward.
+        elegant microeconomic theory.
+        Historically, the practical application of these theoretical concepts has been hindered by factors such as the scarcity
+        of accessible data and computational resources. Moreover, the adoption of these ideas beyond academia has often been
+        constrained by entrenched organizational culture, making change a formidable endeavor. However, at Trampoline, we find
+        ourselves remarkably unencumbered by these barriers. Our unique business model has enabled us to amass a wealth of
+        valuable data, and our culture fosters an environment in which data scientists can thrive.
+        In this context, our distinguishing feature might simply be our adeptness at acquiring comprehensive data through our
+        distinctive business approach, followed by the cultivation of an environment conducive to the success of data
+        scientists. With these cornerstones in place, curiosity, innovation, and the desire to drive meaningful change become
+        the driving forces propelling our endeavors forward.
+
       </p>
     </div>
 
