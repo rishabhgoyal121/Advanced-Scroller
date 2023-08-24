@@ -218,3 +218,29 @@ function detailed_client_outline_g(client_n) {
     return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/factory.svg" transform = "scale(0.5)" ></image >';
   }
 }
+function detailed_inventory_outline_g(client_n) {
+  // return female client-vneck svg path -> female-top-vest
+  if (client_n == 1) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/drawer-white.svg" transform = "scale(0.3)" ></image >';
+  }
+  // return female client-tshirt svg path -> female-top-slant
+  if (client_n == 2) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/sofa-white.svg" transform = "scale(0.3)" ></image >';
+  }
+  // return female client-bun svg path -> female-v-neck
+  if (client_n == 3) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-lamp-white.svg" transform = "scale(0.3)" ></image >';
+  }
+  // return male client-tie svg path -> male-jacket
+  if (client_n == 4) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-lamp-white.svg" transform = "scale(0.3)" ></image >';
+  }
+  // return male client-tshirt svg path -> male-collar
+  if (client_n == 5) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-white.svg" transform = "scale(0.3)" ></image >';
+  }
+  // return male client-tshirt2 svg path -> male-sleeveless -> factory
+  if (client_n == 6) {
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/chair-white.svg" transform = "scale(0.3)" ></image >';
+  }
+}
