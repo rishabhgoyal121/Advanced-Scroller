@@ -219,27 +219,27 @@ function detailed_client_outline_g(client_n) {
   }
 }
 function detailed_inventory_outline_g(client_n) {
-  // return female client-vneck svg path -> female-top-vest
+  // return female client-vneck svg path -> female-top-vest -> drawer white
   if (client_n == 1) {
     return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/drawer-white.svg" transform = "scale(0.3)" ></image >';
   }
-  // return female client-tshirt svg path -> female-top-slant
+  // return female client-tshirt svg path -> female-top-slant -> sofa white
   if (client_n == 2) {
     return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/sofa-white.svg" transform = "scale(0.3)" ></image >';
   }
-  // return female client-bun svg path -> female-v-neck
+  // return female client-bun svg path -> female-v-neck -> mirror table white
   if (client_n == 3) {
-    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-lamp-white.svg" transform = "scale(0.3)" ></image >';
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/mirror-table-white.svg" transform = "scale(0.3)" ></image >';
   }
-  // return male client-tie svg path -> male-jacket
+  // return male client-tie svg path -> male-jacket -> table lamp white
   if (client_n == 4) {
     return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-lamp-white.svg" transform = "scale(0.3)" ></image >';
   }
-  // return male client-tshirt svg path -> male-collar
+  // return male client-tshirt svg path -> male-collar -> mirror white(opaque)
   if (client_n == 5) {
-    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/table-white.svg" transform = "scale(0.3)" ></image >';
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/mirror-white.svg" transform = "scale(0.3)" ></image >';
   }
-  // return male client-tshirt2 svg path -> male-sleeveless -> factory
+  // return male client-tshirt2 svg path -> male-sleeveless -> factory -> chair white
   if (client_n == 6) {
     return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/furniture-white/chair-white.svg" transform = "scale(0.3)" ></image >';
   }
