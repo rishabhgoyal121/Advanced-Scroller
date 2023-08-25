@@ -30,8 +30,8 @@ var map_vertices = d3
   .attr("points")
   .split(" ")
   .map(function (d) {
-    var x = +d.split(",")[0] * 0.5 + 280;
-    var y = +d.split(",")[1] * 0.5 + 300;
+    var x = +d.split(",")[0] + 280;
+    var y = +d.split(",")[1] + 240;
     return [x, y];
   });
 console.log('map vertices are ', map_vertices);
@@ -46,7 +46,7 @@ var hizzy_data = [
 ];
 
 var many_clients_data = [];
-for (var i = 0; i < 2000; i++) {
+for (var i = 0; i < 1400; i++) {
   var h = Math.floor(Math.random() * 6);
   if (h == 5) {
     h = 0;
