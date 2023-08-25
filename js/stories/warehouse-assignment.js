@@ -34,15 +34,15 @@ var map_vertices = d3
     var y = +d.split(",")[1] * 0.5 + 300;
     return [x, y];
   });
-
-var client1_dot_data = [{ x: 450, y: 450 }];
+console.log('map vertices are ', map_vertices);
+var client1_dot_data = [{ x: 500, y: 450 }];
 
 var hizzy_data = [
-  { x: 300, y: 420 },
-  { x: 490, y: 520 },
-  { x: 560, y: 370 },
-  { x: 630, y: 470 },
-  { x: 670, y: 400 },
+  { x: 470, y: 320 },
+  { x: 510, y: 570 },
+  { x: 510, y: 370 },
+  { x: 570, y: 615 },
+  { x: 570, y: 520 },
 ];
 
 var many_clients_data = [];
@@ -127,24 +127,24 @@ function swa_0() {
   d3.select("#swa-cost1")
     .transition()
     .duration(0)
-    .attr("transform", "matrix(1 0 0 1 570 445)");
+    .attr("transform", "translate(800,600)");
   d3.select("#swa-cost2")
     .transition()
     .duration(0)
-    .attr("transform", "matrix(1 0 0 1 650 520)");
+    .attr("transform", "translate(670,550)");
   d3.select("#swa-cost3")
     .transition()
     .duration(0)
-    .attr("transform", "matrix(1 0 0 1 695 410)");
+    .attr("transform", "translate(750,420)");
   d3.select("#swa-cost4")
     .transition()
     .duration(0)
-    .attr("transform", "matrix(1 0 0 1 770 430)")
+    .attr("transform", "translate(790,500)")
     .style("opacity", 1);
   d3.select("#swa-cost5")
     .transition()
     .duration(0)
-    .attr("transform", "matrix(1 0 0 1 750 495)")
+    .attr("transform", "translate(620,400)")
     .style("opacity", 1);
 
   d3.selectAll(".many_clients_dot").remove();
@@ -191,12 +191,12 @@ function swa_0_progress(progress) {
     .attr(
       "transform",
       "translate(" +
-        422 * progress2 +
-        "," +
-        195 * progress2 +
-        ") scale(" +
-        (1 - 0.9 * progress2) +
-        ")"
+      422 * progress2 +
+      "," +
+      195 * progress2 +
+      ") scale(" +
+      (1 - 0.9 * progress2) +
+      ")"
     );
 
   d3.select("#swa-map-outline")
@@ -256,10 +256,10 @@ function swa_1_progress(progress) {
     .attr(
       "transform",
       "matrix(1 0 0 1 " +
-        (570 * (1 - progress2) + progress2 * 316.3404) +
-        " " +
-        (445 * (1 - progress2) + progress2 * 355.7868) +
-        ")"
+      (570 * (1 - progress2) + progress2 * 316.3404) +
+      " " +
+      (445 * (1 - progress2) + progress2 * 355.7868) +
+      ")"
     );
 
   d3.select("#swa-cost2")
@@ -268,10 +268,10 @@ function swa_1_progress(progress) {
     .attr(
       "transform",
       "matrix(1 0 0 1 " +
-        (650 * (1 - progress2) + progress2 * 364.56) +
-        " " +
-        (520 * (1 - progress2) + progress2 * 355.7868) +
-        ")"
+      (650 * (1 - progress2) + progress2 * 364.56) +
+      " " +
+      (520 * (1 - progress2) + progress2 * 355.7868) +
+      ")"
     );
 
   d3.select("#swa-cost3")
@@ -280,10 +280,10 @@ function swa_1_progress(progress) {
     .attr(
       "transform",
       "matrix(1 0 0 1 " +
-        (695 * (1 - progress2) + progress2 * 412.7801) +
-        " " +
-        (410 * (1 - progress2) + progress2 * 355.7868) +
-        ")"
+      (695 * (1 - progress2) + progress2 * 412.7801) +
+      " " +
+      (410 * (1 - progress2) + progress2 * 355.7868) +
+      ")"
     );
 
   d3.select("#swa-cost4")
@@ -292,10 +292,10 @@ function swa_1_progress(progress) {
     .attr(
       "transform",
       "matrix(1 0 0 1 " +
-        (770 * (1 - progress2) + progress2 * 461.0002) +
-        " " +
-        (430 * (1 - progress2) + progress2 * 355.7868) +
-        ")"
+      (770 * (1 - progress2) + progress2 * 461.0002) +
+      " " +
+      (430 * (1 - progress2) + progress2 * 355.7868) +
+      ")"
     )
     .style("opacity", 1 - progress2);
 
@@ -305,10 +305,10 @@ function swa_1_progress(progress) {
     .attr(
       "transform",
       "matrix(1 0 0 1 " +
-        (750 * (1 - progress2) + progress2 * 509.1) +
-        " " +
-        (495 * (1 - progress2) + progress2 * 355.7868) +
-        ")"
+      (750 * (1 - progress2) + progress2 * 509.1) +
+      " " +
+      (495 * (1 - progress2) + progress2 * 355.7868) +
+      ")"
     )
     .style("opacity", 1 - progress2);
 
