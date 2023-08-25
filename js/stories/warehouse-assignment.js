@@ -34,7 +34,6 @@ var map_vertices = d3
     var y = +d.split(",")[1] + 240;
     return [x, y];
   });
-console.log('map vertices are ', map_vertices);
 var client1_dot_data = [{ x: 500, y: 450 }];
 
 var hizzy_data = [
