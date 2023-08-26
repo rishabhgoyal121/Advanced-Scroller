@@ -2802,7 +2802,7 @@ activateFunctions.push(function () {
 
 updateFunctions.push(function (progress) {
   // show / hide the topic buttons
-  if (progress > 1.5) {
+  if (progress > 7) {
     hide_topics();
   } else {
     show_topics();
@@ -2810,7 +2810,7 @@ updateFunctions.push(function (progress) {
 
   // show / hide the paragraph highlight, footer, platform animation
 
-  if (progress > 1.2) {
+  if (progress > 7) {
     d3.selectAll(".step").attr("class", "step");
 
     update_footer("");
@@ -2821,7 +2821,7 @@ updateFunctions.push(function (progress) {
       .transition()
       .duration(0)
       .attr("display", "block")
-      .style("opacity", Math.max(0, (1.5 - progress) / 0.3));
+      .style("opacity", Math.max(0, (7 - progress) / 7));
   } else {
     d3.selectAll(".step").attr("class", function (d, i) {
       return i == activateFunctions.length - 1
@@ -2842,7 +2842,7 @@ updateFunctions.push(function (progress) {
       .style("opacity", 1);
   }
 
-  if (progress > 1.5) {
+  if (progress > 7) {
     stop_animation_timer("data_platform_animation_timer");
 
     d3.selectAll(
