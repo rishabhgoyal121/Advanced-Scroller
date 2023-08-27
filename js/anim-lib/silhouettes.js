@@ -215,7 +215,7 @@ function detailed_client_outline_g(client_n) {
   }
   // return male client-tshirt2 svg path -> male-sleeveless -> factory
   if (client_n == 6) {
-    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/factory.svg" transform = "scale(0.5)" ></image >';
+    return '<image overflow="visible" width="91" height="154" xlink:href="Trampoline-svg-crop/factory-white.svg" transform = "scale(0.5)" ></image >';
   }
 }
 function detailed_inventory_outline_g(client_n) {
